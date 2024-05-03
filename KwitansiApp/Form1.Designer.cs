@@ -261,6 +261,8 @@ namespace KwitansiApp
             this.t_total.Name = "t_total";
             this.t_total.Size = new System.Drawing.Size(100, 20);
             this.t_total.TabIndex = 12;
+            this.t_total.TextChanged += new System.EventHandler(this.t_total_TextChanged);
+            this.t_total.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.t_total_KeyPress);
             // 
             // t_uangSejumlah
             // 

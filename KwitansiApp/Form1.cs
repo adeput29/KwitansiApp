@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
@@ -219,18 +221,54 @@ namespace KwitansiApp
         {
             t_total.Enabled = false;
             t_total.BackColor = SystemColors.ScrollBar;
+            
 
             if (hargabayar1.Text == "" || hargabayar1.Text == "0") return;
             decimal price;
             price = decimal.Parse(hargabayar1.Text, System.Globalization.NumberStyles.Currency);
             hargabayar1.Text = price.ToString("#,#");
             hargabayar1.SelectionStart = hargabayar1.Text.Length;
+
+            int harga1, harga2, harga3;
+            
+
+            if (hargabayar1.Text == "")
+            {
+                harga1 = 0;
+            } else
+            {
+                int ans = int.Parse(hargabayar1.Text, System.Globalization.NumberStyles.AllowThousands | System.Globalization.NumberStyles.AllowLeadingSign);
+                harga1 = ans;
+            }
+            
+            if (hargabayar2.Text == "")
+            {
+                harga2 = 0;
+            } else
+            {
+                int ans = int.Parse(hargabayar2.Text, System.Globalization.NumberStyles.AllowThousands | System.Globalization.NumberStyles.AllowLeadingSign);
+                harga2 = ans;
+            }
+            if (hargabayar3.Text == "")
+            {
+                harga3 = 0;
+            } else
+            {
+                int ans = int.Parse(hargabayar3.Text, System.Globalization.NumberStyles.AllowThousands | System.Globalization.NumberStyles.AllowLeadingSign);
+                harga3 = ans;
+            }
+
+            int hitung = harga1 + harga2 + harga3;
+            t_total.Text = hitung.ToString();
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             t_total.Enabled = false;
             t_total.BackColor = SystemColors.ScrollBar;
+            int hitung = int.Parse(hargabayar1.Text) + int.Parse(hargabayar2.Text) + int.Parse(hargabayar3.Text);
+            t_total.Text = hitung.ToString();
 
             if (hargabayar2.Text == "" || hargabayar2.Text == "0") return;
             decimal price;
@@ -243,6 +281,8 @@ namespace KwitansiApp
         {
             t_total.Enabled = false;
             t_total.BackColor = SystemColors.ScrollBar;
+            int hitung = int.Parse(hargabayar1.Text) + int.Parse(hargabayar2.Text) + int.Parse(hargabayar3.Text);
+            t_total.Text = hitung.ToString();
 
             if (hargabayar3.Text == "" || hargabayar3.Text == "0") return;
             decimal price;
@@ -332,6 +372,24 @@ namespace KwitansiApp
             {
                 e.Handled = true;
             }
+        }
+
+        private void t_total_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+        (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void t_total_TextChanged(object sender, EventArgs e)
+        {
+            if (t_total.Text == "" || t_total.Text == "0") return;
+            decimal price;
+            price = decimal.Parse(t_total.Text, System.Globalization.NumberStyles.Currency);
+            t_total.Text = price.ToString("#,#");
+            t_total.SelectionStart = t_total.Text.Length;
         }
     }
 }
