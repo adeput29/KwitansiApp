@@ -219,18 +219,36 @@ namespace KwitansiApp
         {
             t_total.Enabled = false;
             t_total.BackColor = SystemColors.ScrollBar;
+
+            if (hargabayar1.Text == "" || hargabayar1.Text == "0") return;
+            decimal price;
+            price = decimal.Parse(hargabayar1.Text, System.Globalization.NumberStyles.Currency);
+            hargabayar1.Text = price.ToString("#,#");
+            hargabayar1.SelectionStart = hargabayar1.Text.Length;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             t_total.Enabled = false;
             t_total.BackColor = SystemColors.ScrollBar;
+
+            if (hargabayar2.Text == "" || hargabayar2.Text == "0") return;
+            decimal price;
+            price = decimal.Parse(hargabayar2.Text, System.Globalization.NumberStyles.Currency);
+            hargabayar2.Text = price.ToString("#,#");
+            hargabayar2.SelectionStart = hargabayar2.Text.Length;
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
             t_total.Enabled = false;
             t_total.BackColor = SystemColors.ScrollBar;
+
+            if (hargabayar3.Text == "" || hargabayar3.Text == "0") return;
+            decimal price;
+            price = decimal.Parse(hargabayar3.Text, System.Globalization.NumberStyles.Currency);
+            hargabayar3.Text = price.ToString("#,#");
+            hargabayar3.SelectionStart = hargabayar3.Text.Length;
         }
 
         private void b_cari_Click(object sender, EventArgs e)
@@ -287,6 +305,33 @@ namespace KwitansiApp
             hargabayar3.BackColor = SystemColors.ScrollBar;
 
 
+        }
+
+        private void hargabayar1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+        (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void hargabayar2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+        (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void hargabayar3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+        (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
