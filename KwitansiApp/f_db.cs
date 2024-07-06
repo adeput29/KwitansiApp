@@ -27,8 +27,8 @@ namespace KwitansiApp
         {
             RegistryKey key = Registry.LocalMachine.OpenSubKey("Software", true);
 
-            key.CreateSubKey("scanbarcode");
-            key = key.OpenSubKey("scanbarcode", true);
+            key.CreateSubKey("kwitansiapp");
+            key = key.OpenSubKey("kwitansiapp", true);
 
             key.SetValue("DataSource", t_server.Text);
             key.SetValue("DataCatalog", t_dbsql.Text);
@@ -52,7 +52,7 @@ namespace KwitansiApp
         {
             try
             {
-                using (RegistryKey key = Registry.LocalMachine.OpenSubKey("Software\\Wow6432Node\\scanbarcode"))
+                using (RegistryKey key = Registry.LocalMachine.OpenSubKey("Software\\Wow6432Node\\kwitansiapp"))
                 {
                     if (key != null)
                     {

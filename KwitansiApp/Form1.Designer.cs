@@ -93,7 +93,7 @@ namespace KwitansiApp
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(452, 354);
-            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Data Kwitansi";
             // 
@@ -104,7 +104,7 @@ namespace KwitansiApp
             this.b_print.Location = new System.Drawing.Point(131, 295);
             this.b_print.Name = "b_print";
             this.b_print.Size = new System.Drawing.Size(171, 41);
-            this.b_print.TabIndex = 14;
+            this.b_print.TabIndex = 22;
             this.b_print.Text = "Print";
             this.b_print.UseVisualStyleBackColor = false;
             this.b_print.Click += new System.EventHandler(this.b_print_Click);
@@ -127,7 +127,7 @@ namespace KwitansiApp
             this.t_date.Location = new System.Drawing.Point(131, 222);
             this.t_date.Name = "t_date";
             this.t_date.Size = new System.Drawing.Size(171, 20);
-            this.t_date.TabIndex = 28;
+            this.t_date.TabIndex = 18;
             // 
             // label10
             // 
@@ -171,7 +171,7 @@ namespace KwitansiApp
             this.hargabayar3.Location = new System.Drawing.Point(324, 166);
             this.hargabayar3.Name = "hargabayar3";
             this.hargabayar3.Size = new System.Drawing.Size(100, 20);
-            this.hargabayar3.TabIndex = 23;
+            this.hargabayar3.TabIndex = 16;
             this.hargabayar3.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             this.hargabayar3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.hargabayar3_KeyPress);
             // 
@@ -181,7 +181,7 @@ namespace KwitansiApp
             this.untukbayar3.Location = new System.Drawing.Point(131, 166);
             this.untukbayar3.Name = "untukbayar3";
             this.untukbayar3.Size = new System.Drawing.Size(171, 20);
-            this.untukbayar3.TabIndex = 22;
+            this.untukbayar3.TabIndex = 15;
             // 
             // hargabayar2
             // 
@@ -189,7 +189,7 @@ namespace KwitansiApp
             this.hargabayar2.Location = new System.Drawing.Point(324, 140);
             this.hargabayar2.Name = "hargabayar2";
             this.hargabayar2.Size = new System.Drawing.Size(100, 20);
-            this.hargabayar2.TabIndex = 20;
+            this.hargabayar2.TabIndex = 14;
             this.hargabayar2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.hargabayar2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.hargabayar2_KeyPress);
             // 
@@ -199,7 +199,7 @@ namespace KwitansiApp
             this.untukbayar2.Location = new System.Drawing.Point(131, 140);
             this.untukbayar2.Name = "untukbayar2";
             this.untukbayar2.Size = new System.Drawing.Size(171, 20);
-            this.untukbayar2.TabIndex = 19;
+            this.untukbayar2.TabIndex = 13;
             // 
             // hargabayar1
             // 
@@ -207,7 +207,7 @@ namespace KwitansiApp
             this.hargabayar1.Location = new System.Drawing.Point(324, 114);
             this.hargabayar1.Name = "hargabayar1";
             this.hargabayar1.Size = new System.Drawing.Size(100, 20);
-            this.hargabayar1.TabIndex = 17;
+            this.hargabayar1.TabIndex = 12;
             this.hargabayar1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.hargabayar1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.hargabayar1_KeyPress);
             // 
@@ -226,7 +226,7 @@ namespace KwitansiApp
             this.b_cari.Location = new System.Drawing.Point(272, 37);
             this.b_cari.Name = "b_cari";
             this.b_cari.Size = new System.Drawing.Size(30, 20);
-            this.b_cari.TabIndex = 15;
+            this.b_cari.TabIndex = 1000;
             this.b_cari.Text = "...";
             this.b_cari.UseVisualStyleBackColor = true;
             this.b_cari.Click += new System.EventHandler(this.b_cari_Click);
@@ -238,7 +238,7 @@ namespace KwitansiApp
             this.b_simpan.Location = new System.Drawing.Point(224, 248);
             this.b_simpan.Name = "b_simpan";
             this.b_simpan.Size = new System.Drawing.Size(78, 41);
-            this.b_simpan.TabIndex = 13;
+            this.b_simpan.TabIndex = 20;
             this.b_simpan.Text = "Simpan";
             this.b_simpan.UseVisualStyleBackColor = false;
             this.b_simpan.Click += new System.EventHandler(this.b_simpan_Click);
@@ -248,7 +248,7 @@ namespace KwitansiApp
             this.b_baru.Location = new System.Drawing.Point(131, 248);
             this.b_baru.Name = "b_baru";
             this.b_baru.Size = new System.Drawing.Size(87, 41);
-            this.b_baru.TabIndex = 12;
+            this.b_baru.TabIndex = 19;
             this.b_baru.Text = "Tambah Baru";
             this.b_baru.UseVisualStyleBackColor = true;
             this.b_baru.Click += new System.EventHandler(this.b_baru_Click);
@@ -260,7 +260,7 @@ namespace KwitansiApp
             this.t_total.Location = new System.Drawing.Point(131, 193);
             this.t_total.Name = "t_total";
             this.t_total.Size = new System.Drawing.Size(100, 20);
-            this.t_total.TabIndex = 12;
+            this.t_total.TabIndex = 17;
             this.t_total.TextChanged += new System.EventHandler(this.t_total_TextChanged);
             this.t_total.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.t_total_KeyPress);
             // 
@@ -271,6 +271,7 @@ namespace KwitansiApp
             this.t_uangSejumlah.Name = "t_uangSejumlah";
             this.t_uangSejumlah.Size = new System.Drawing.Size(171, 20);
             this.t_uangSejumlah.TabIndex = 10;
+            this.t_uangSejumlah.TextChanged += new System.EventHandler(this.t_uangSejumlah_TextChanged);
             // 
             // t_terimaDari
             // 
@@ -356,7 +357,7 @@ namespace KwitansiApp
             this.t_passAdmin.Location = new System.Drawing.Point(178, 377);
             this.t_passAdmin.Name = "t_passAdmin";
             this.t_passAdmin.Size = new System.Drawing.Size(100, 20);
-            this.t_passAdmin.TabIndex = 4;
+            this.t_passAdmin.TabIndex = 100;
             this.t_passAdmin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.t_passAdmin_KeyPress);
             // 
             // label6
