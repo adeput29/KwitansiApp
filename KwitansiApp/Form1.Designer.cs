@@ -29,6 +29,7 @@ namespace KwitansiApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.b_print = new System.Windows.Forms.Button();
             this.b_gantittl = new System.Windows.Forms.Button();
@@ -378,6 +379,7 @@ namespace KwitansiApp
             this.Controls.Add(this.t_passAdmin);
             this.Controls.Add(this.t_setDB);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KwitansiApp";
